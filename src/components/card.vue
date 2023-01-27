@@ -45,7 +45,8 @@ export default {
                             <h5 class="text-light">{{ serie.original_name }}</h5>
                             <span class="text-light pb-4">{{ serie.overview }}</span>
                             <div class="d-flex justify-content-around">
-                                <span class="text-light">{{ serie.original_language }}</span>
+                                <img class="flag text-light" :src="`../assets/img/${serie.original_language}.png`"
+                                    :alt="serie.original_language">
                                 <span class="text-warning">{{ serie.vote_average }}</span>
                             </div>
                         </div>
