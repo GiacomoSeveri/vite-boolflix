@@ -13,18 +13,18 @@ export default {
 
 <template>
     <div class="custom-bgc pt-5">
-        <h1 class="ms-2 text-danger">FILM</h1>
+        <h1 class="ms-2 text-danger" type="button">FILM</h1>
         <div class="container">
-            <ul class="hover-data2 row row-cols-4 d-flex justify-content-start">
+            <ul class="row row-cols-lg-4  d-flex justify-content-start">
                 <li class="my-3 d-flex justify-content-center m-0" v-for="movie in store.movies" :key="movie.id">
                     <figure>
                         <img class="m-0 cover" :src="imgTunnel + movie.poster_path" :alt="movie.title">
                         <div class="caption">
                             <h3 class="text-danger">{{ movie.title }}</h3>
                             <h5 class="text-light">{{ movie.original_title }}</h5>
-                            <span class="text-light mb-4">{{ movie.overview }}</span>
-                            <div class="d-flex justify-content-around">
-                                <img class="flag text-light" :src="`../assets/img/${movie.original_language}.png`"
+                            <span class="text-light">{{ movie.overview }}</span>
+                            <div class="d-flex justify-content-around mt-3">
+                                <img class="flag text-light" :src="`img/${movie.original_language}.png`"
                                     :alt="movie.original_language">
                                 <span class="text-warning">{{ movie.vote_average }}</span>
                             </div>
@@ -34,18 +34,18 @@ export default {
             </ul>
         </div>
 
-        <h1 class="ms-2 text-danger">SERIE TV</h1>
+        <h1 class="ms-2 text-danger" type="button">SERIE TV</h1>
         <div class="container">
-            <ul class="hover-data2 row row-cols-4 d-flex justify-content-start">
+            <ul class="row row-cols-4 d-flex justify-content-start">
                 <li class="my-3 d-flex justify-content-center m-0" v-for="serie in store.series" :key="serie.id">
                     <figure>
                         <img class="m-0 cover" :src="imgTunnel + serie.poster_path" :alt="serie.name">
                         <div class="caption">
                             <h3 class="text-danger">{{ serie.name }}</h3>
                             <h5 class="text-light">{{ serie.original_name }}</h5>
-                            <span class="text-light pb-4">{{ serie.overview }}</span>
-                            <div class="d-flex justify-content-around">
-                                <img class="flag text-light" :src="`../assets/img/${serie.original_language}.png`"
+                            <span class="text-light">{{ serie.overview }}</span>
+                            <div class="d-flex justify-content-around mt-3">
+                                <img class="flag text-light" :src="`img/${serie.original_language}.png`"
                                     :alt="serie.original_language">
                                 <span class="text-warning">{{ serie.vote_average }}</span>
                             </div>

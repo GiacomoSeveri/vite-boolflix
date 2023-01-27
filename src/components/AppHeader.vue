@@ -15,9 +15,9 @@ export default {
 
 <template>
     <div class="d-flex align-items-center custom-bgc">
-        <h1 class="m-2 fw-bold text-danger">BOOLFLIX</h1>
+        <h1 class="m-2 fw-bold text-danger" type="button">BOOLFLIX</h1>
         <input v-model="store.searchTitle" type="text" class="form-control " placeholder="cosa vuoi vedere?">
-        <button @click="$emit('research', store.searchTitle)" class="btn btn-outline-danger m-3">cerca</button>
+        <button @click="$emit('research', store.searchTitle)" class="btn btn-outline-danger m-3">CERCA</button>
     </div>
 </template>
 
