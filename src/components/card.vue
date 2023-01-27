@@ -24,7 +24,8 @@ export default {
                             <h5 class="text-light">{{ movie.original_title }}</h5>
                             <span class="text-light mb-4">{{ movie.overview }}</span>
                             <div class="d-flex justify-content-around">
-                                <span class="text-light">{{ movie.original_language }}</span>
+                                <img class="flag text-light" :src="`../assets/img/${movie.original_language}.png`"
+                                    :alt="movie.original_language">
                                 <span class="text-warning">{{ movie.vote_average }}</span>
                             </div>
                         </div>
@@ -94,6 +95,9 @@ ul {
         }
     }
 
-
+    .flag {
+        width: 35px;
+        height: 20px;
+    }
 }
 </style>
