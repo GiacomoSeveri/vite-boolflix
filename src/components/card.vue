@@ -10,7 +10,8 @@ export default {
     },
     computed: {
         vote() {
-            return Math.ceil(this.store.movies.vote_average / 2)
+            return Math.ceil(parseInt(this.store.movies.vote_average) / 2)
+            // console.log(typeof this.store.movies.vote_average)
         }
     }
 }
