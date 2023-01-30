@@ -1,15 +1,15 @@
 <script>
 import { store } from './data/store'
-import card from './card.vue';
+import cards from './cards.vue';
 
 export default {
     name: 'AppMain',
-    components: { card },
+    components: { cards },
 }
 </script>
 
 <template>
-    <card></card>
+    <cards></cards>
 </template>
 
 <style lang="scss" scoped>
